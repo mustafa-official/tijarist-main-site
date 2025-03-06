@@ -1,10 +1,8 @@
-import React from "react";
-import { BsArrowRight } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
 
 const Banner = () => {
   return (
-    <div className="px-4">
+    <div className="px-4 max-w-[1380px] mx-auto">
       <div className="bg-gradient-to-b rounded-3xl from-black via-purple-900 to-black mt-4">
         {/* Main Banner Section */}
         <div className="px-4 pt-16 md:pt-24 flex flex-col items-center justify-center text-center">
