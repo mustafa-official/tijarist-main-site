@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -68,12 +68,12 @@ const Navbar = () => {
             {["Solutions", "Pricing", "About us", "Contact us", "Help"].map(
               (item, index) => (
                 <li key={index}>
-                  <a
-                    href="#"
+                  <Link
+                    to={item === "Pricing" && "/pricing"}
                     className="block py-2 pl-3 pr-4 text-[16px] text-[#555151] lg:p-0"
                   >
                     {item}
-                  </a>
+                  </Link>
                 </li>
               )
             )}
