@@ -5,6 +5,9 @@ import Home from "../pages/Home";
 import Pricing from "../pages/Pricing";
 import StartBusiness from "../pages/StartBusiness";
 import SellProduct from "../pages/SellProduct";
+import MarketProduct from "../pages/MarketProduct";
+import ManageBusiness from "../pages/ManageBusiness";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
       {
         path: "/sell-product",
         element: <SellProduct />,
+      },
+      {
+        path: "/market-product",
+        element: <MarketProduct />,
+      },
+      {
+        path: "/manage-business",
+        element: <ManageBusiness />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },

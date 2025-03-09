@@ -1,21 +1,20 @@
-import img1 from "../assets/marketproduct1.png";
-import img2 from "../assets/marketproduct2.png";
-import img3 from "../assets/marketproduct3.png";
-import img4 from "../assets/marketproduct4.png";
-import img5 from "../assets/marketproduct5.png";
-import img6 from "../assets/marketproduct6.png";
+import img1 from "../assets/managebusiness1.png";
+import img2 from "../assets/managebusiness2.png";
+import img3 from "../assets/managebusiness3.png";
+import img4 from "../assets/managebusiness4.png";
+import img5 from "../assets/managebusiness5.jpeg";
+import img6 from "../assets/managebusiness6.png";
 
-const MarketProduct = () => {
+const ManageBusiness = () => {
   return (
     <div className="my-8 md:my-12 lg:my-16">
       <div className="max-w-5xl mx-auto px-4">
         <div className="my-4">
           <h2 className="font-bold text-2xl md:text-[28px] lg:text-4xl text-black text-center">
-            Market your products easily
+            Manage your business
           </h2>
           <p className="text-center text-[#555151] font-medium text-[16px] sm:text-[18px] mt-5 mb-3">
-            Find more customers, build profitable relationships, and make
-            strategic decisions with unbiased data
+            Make your business work with a powerful back office management tools
           </p>
           <p className="text-[#555151] text-sm text-center max-w-[630px] mx-auto leading-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -38,10 +37,10 @@ const MarketProduct = () => {
         <div className="flex items-center flex-col-reverse md:flex-row gap-6 md:gap-8 lg:gap-10 justify-between mt-10 sm:mt-14 md:mt-20">
           <div className="w-full md:w-[40%]">
             <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-black ">
-              Social media marketing
+              Manage your finance and access funding
             </h2>
             <p className="text-[#555151] font-medium text-[16px] sm:text-[18px] mt-4 mb-3">
-              Share your products directly from Shopify to social platforms
+              Manage your money where you make it
             </p>
             <p className="text-[#555151] text-sm leading-5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -63,13 +62,13 @@ const MarketProduct = () => {
               className="rounded-3xl w-full h-[385px] object-cover"
               alt=""
             />
-            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-md rounded-xl p-4 -mt-[150px] ml-4 sm:ml-6 mr-4">
+            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-md rounded-xl p-4 -mt-[128px] ml-4 sm:ml-6 mr-4">
               <h3 className="text-black font-semibold text-sm md:text-base lg:text-[18px]">
-                Chat with customers
+                Manage your stock and orders
               </h3>
               <p className="text-black text-xs md:text-sm mt-2">
-                Manage customer conversations, create automated messages, and
-                get insights to focus on chats that convert
+                Add more features to your store with apps from trusted Shopify
+                partners.
               </p>
             </div>
           </div>
@@ -79,12 +78,13 @@ const MarketProduct = () => {
               className="rounded-3xl w-full h-[385px] object-cover"
               alt=""
             />
-            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-lg rounded-xl p-4 -mt-[116px] ml-4 sm:ml-6 mr-4">
+            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-lg rounded-xl p-4 -mt-[132px] ml-4 sm:ml-6 mr-4">
               <h3 className="text-black font-semibold text-sm md:text-base lg:text-[18px]">
-                Know your audience
+                Automate your business
               </h3>
               <p className="text-[#555151] text-xs md:text-sm mt-3">
-                Understand your data better and act on it for free
+                Add more features to your store with apps from trusted Shopify
+                partners.
               </p>
             </div>
           </div>
@@ -98,11 +98,11 @@ const MarketProduct = () => {
             />
             <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-md rounded-xl p-4 -mt-[130px] ml-4 sm:ml-6 mr-4">
               <h3 className="text-black font-semibold text-sm md:text-base lg:text-[18px]">
-                Risk free ad-campaign
+                Ship order hassle-free
               </h3>
               <p className="text-[#555151] text-xs md:text-sm mt-2">
-                Target shoppers across Meta, Google Set your target and let Shop
-                do the rest.
+                Save time with a shipping solution built into, thats ready to go
+                as soon as you get your first order.
               </p>
             </div>
           </div>
@@ -112,12 +112,13 @@ const MarketProduct = () => {
               className="rounded-3xl w-full h-[385px] object-cover"
               alt=""
             />
-            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-lg rounded-xl p-4 -mt-[116px] ml-4 sm:ml-6 mr-4">
+            <div className="absolute max-w-[360px] bg-[#FFFFFF4D] backdrop-blur-lg rounded-xl p-4 -mt-[132px] ml-4 sm:ml-6 mr-4">
               <h3 className="text-black font-semibold text-sm md:text-base lg:text-[18px]">
-                Drive sales with influencers
+                Measure your performance
               </h3>
               <p className="text-[#555151] text-xs md:text-sm mt-3">
-                Find and manage influential creators and collab
+                Personalize your design with drag-and-drop tools that make your
+                online store shine.
               </p>
             </div>
           </div>
@@ -149,4 +150,4 @@ const MarketProduct = () => {
   );
 };
 
-export default MarketProduct;
+export default ManageBusiness;

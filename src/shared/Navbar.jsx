@@ -1,8 +1,29 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { GoChevronRight } from "react-icons/go";
 import { Link } from "react-router-dom";
+import icon1 from "../assets/launch1.png";
+import icon2 from "../assets/launch2.png";
+import icon3 from "../assets/launch3.png";
+import icon4 from "../assets/launch4.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <nav className="py-2.5">
       <div className="flex flex-wrap items-center justify-between px-4 md:px-10">
@@ -65,18 +86,97 @@ const Navbar = () => {
           id="mobile-menu"
         >
           <ul className="flex flex-col mt-4 lg:flex-row lg:space-x-8 lg:mt-0">
-            {["Solutions", "Pricing", "About us", "Contact us", "Help"].map(
-              (item, index) => (
-                <li key={index}>
+            {/* Solutions Dropdown */}
+            <li className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                className="block py-2 pl-3 pr-4 text-[16px] text-[#555151] lg:p-0 flex items-center"
+              >
+                Solutions
+                <svg
+                  className="ml-2 w-3.5 h-3.5 transition-transform duration-300 ease-in-out"
+                  style={{
+                    transform: isDropdownOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                  }}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+
+              <div
+                className={`absolute left-0 mt-6 w-72 bg-white border shadow-lg rounded-lg px-2 overflow-hidden transform transition-all duration-300 ease-in-out ${
+                  isDropdownOpen
+                    ? "opacity-100 translate-y-0 scale-100"
+                    : "opacity-0 -translate-y-5 scale-95 pointer-events-none"
+                }`}
+              >
+                {[
+                  {
+                    icon: icon1,
+                    label: "Start your business",
+                    link: "start-business",
+                  },
+                  {
+                    icon: icon2,
+                    label: "Sell your product",
+                    link: "sell-product",
+                  },
+                  {
+                    icon: icon3,
+                    label: "Market your product",
+                    link: "market-product",
+                  },
+                  {
+                    icon: icon4,
+                    label: "Manage your business",
+                    link: "manage-business",
+                  },
+                ].map((item, index) => (
                   <Link
-                    to={item === "Pricing" && "/pricing"}
-                    className="block py-2 pl-3 pr-4 text-[16px] text-[#555151] lg:p-0"
+                    key={index}
+                    to={item.link}
+                    onClick={() => setIsDropdownOpen(false)}
+                    className="flex items-center p-2 border-b last:border-b-0"
                   >
-                    {item}
+                    <div className="text-xl mr-3 w-10 h-10 border-2 border-[#7E42FF] rounded-2xl flex justify-center items-center p-1">
+                      <img src={item.icon} alt="" />
+                    </div>
+                    <span className="text-[16px] text-black">{item.label}</span>
+                    <span className="ml-auto text-black">
+                      <GoChevronRight />
+                    </span>
                   </Link>
-                </li>
-              )
-            )}
+                ))}
+              </div>
+            </li>
+
+            {/* Other Navbar Items */}
+            {[
+              { name: "Pricing", path: "pricing" },
+              { name: "About us", path: "about" },
+              { name: "Contact us", path: "contact" },
+              { name: "Help", path: "help" },
+            ].map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.path}
+                  className="block py-2 pl-3 pr-4 text-[16px] text-[#555151] lg:p-0"
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
