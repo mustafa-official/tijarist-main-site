@@ -3,6 +3,8 @@ import ErrorPage from "../pages/ErrorPage";
 import Root from "../layout/Root";
 import Home from "../pages/Home";
 import Pricing from "../pages/Pricing";
+import StartBusiness from "../pages/StartBusiness";
+import SellProduct from "../pages/SellProduct";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/start-business",
+        element: <StartBusiness />,
+      },
+      {
+        path: "/sell-product",
+        element: <SellProduct />,
       },
     ],
   },
