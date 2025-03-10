@@ -8,6 +8,8 @@ import SellProduct from "../pages/SellProduct";
 import MarketProduct from "../pages/MarketProduct";
 import ManageBusiness from "../pages/ManageBusiness";
 import Contact from "../pages/Contact";
+import Theme from "../pages/Theme";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,14 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/theme",
+        element: <Theme />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
       },
     ],
   },
