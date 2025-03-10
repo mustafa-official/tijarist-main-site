@@ -164,7 +164,7 @@ const Navbar = () => {
             {/* Other Navbar Items */}
             {[
               { name: "Pricing", path: "pricing" },
-              { name: "About us", path: "about" },
+              { name: "About us", path: "about-us" },
               { name: "Contact us", path: "contact" },
               { name: "Help", path: "help" },
             ].map((item, index) => (

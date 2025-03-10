@@ -10,6 +10,11 @@ import ManageBusiness from "../pages/ManageBusiness";
 import Contact from "../pages/Contact";
 import Theme from "../pages/Theme";
 import AboutUs from "../pages/AboutUs";
+import Faq from "../pages/Faq";
+import TermsCondition from "../pages/TermsCondition";
+import PrivacyPolicy from "../pages/PrivacyPolicy";
+import RefundPolicy from "../pages/RefundPolicy";
+import Testimonial from "../pages/Testimonial";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +57,26 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/terms-condition",
+        element: <TermsCondition />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/refund-policy",
+        element: <RefundPolicy />,
+      },
+      {
+        path: "/testimonial",
+        element: <Testimonial />,
       },
     ],
   },

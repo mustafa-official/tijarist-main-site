@@ -56,9 +56,9 @@ const Faq = () => {
             >
               <span className="mr-4">{faq.question}</span>
               {openIndex === index ? (
-                <FiMinus className="w-5 h-5 ml-auto shrink-0" />
+                <FiMinus className="w-5 h-5 ml-auto shrink-0 text-black" />
               ) : (
-                <FiPlus className="w-5 h-5 ml-auto shrink-0" />
+                <FiPlus className="w-5 h-5 ml-auto shrink-0 text-black" />
               )}
             </button>
             <div

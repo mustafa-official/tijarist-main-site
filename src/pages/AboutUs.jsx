@@ -49,7 +49,7 @@ const AboutUs = () => {
       </div>
       <div className="mt-14 md:mt-16 lg:mt-20">
         <div className="flex items-center flex-col lg:flex-row gap-5">
-          <div className="w-[32%]">
+          <div className="w-full lg:w-[32%]">
             <h2 className="text-black font-medium text-xl md:text-3xl">
               Why Choose Tijarist?
             </h2>
@@ -62,7 +62,7 @@ const AboutUs = () => {
               experience and a shared vision.
             </p>
           </div>
-          <div className="w-[68%]">
+          <div className="w-full lg:w-[68%]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div className="bg-[#EDE4FF] border border-[#00000040] rounded-xl px-6 py-12 transition-all duration-300 hover:shadow-lg">
                 <h3 className="text-base lg:text-xl text-black font-bold mb-3">
