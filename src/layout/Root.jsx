@@ -4,11 +4,11 @@ import Footer from "../shared/Footer";
 
 const Root = () => {
   return (
-    <>
+    <div className="bg-gradient-to-r from-[#FEF7DD] to-[#E0FAEE]">
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -15,6 +15,9 @@ import TermsCondition from "../pages/TermsCondition";
 import PrivacyPolicy from "../pages/PrivacyPolicy";
 import RefundPolicy from "../pages/RefundPolicy";
 import Testimonial from "../pages/Testimonial";
+import Blog from "../pages/Blog";
+import BlogDetails from "../pages/BlogDetails";
+import FreeTrial from "../pages/FreeTrial";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +80,18 @@ const router = createBrowserRouter([
       {
         path: "/testimonial",
         element: <Testimonial />,
+      },
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      {
+        path: "/blog-details",
+        element: <BlogDetails />,
+      },
+      {
+        path: "/free-trial",
+        element: <FreeTrial />,
       },
     ],
   },
