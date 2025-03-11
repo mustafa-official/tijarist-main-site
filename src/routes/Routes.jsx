@@ -18,6 +18,7 @@ import Testimonial from "../pages/Testimonial";
 import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import FreeTrial from "../pages/FreeTrial";
+import Themes from "../pages/Themes";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
       {
         path: "/free-trial",
         element: <FreeTrial />,
+      },
+      {
+        path: "/themes",
+        element: <Themes />,
       },
     ],
   },
