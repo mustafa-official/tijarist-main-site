@@ -19,6 +19,7 @@ import Blog from "../pages/Blog";
 import BlogDetails from "../pages/BlogDetails";
 import FreeTrial from "../pages/FreeTrial";
 import Themes from "../pages/Themes";
+import ThemeDetails from "../pages/ThemeDetails";
 
 const router = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
       {
         path: "/themes",
         element: <Themes />,
+      },
+      {
+        path: "/theme-details",
+        element: <ThemeDetails />,
       },
     ],
   },

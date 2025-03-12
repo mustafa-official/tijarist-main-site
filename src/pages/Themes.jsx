@@ -1,33 +1,9 @@
 import { useState } from "react";
 import { FiFilter } from "react-icons/fi";
 import { IoIosArrowUp } from "react-icons/io";
-
-const themes = [
-  {
-    id: 1,
-    images: [
-      "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60",
-    ],
-  },
-  {
-    id: 2,
-    images: [
-      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop&q=60",
-    ],
-  },
-  {
-    id: 3,
-    images: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=800&auto=format&fit=crop&q=60",
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=60",
-    ],
-  },
-];
+import img1 from "../assets/themes2.jpeg";
+import img2 from "../assets/themes1.jpeg";
+import img3 from "../assets/themes3.jpeg";
 
 const industries = [
   { name: "Arts and craft", count: 120 },
@@ -36,9 +12,106 @@ const industries = [
   { name: "Clothing", count: 243 },
   { name: "Electronics", count: 198 },
 ];
+const catalogues = [
+  { name: "1-9 Products" },
+  { name: "10- 199 Products" },
+  { name: "200+ Products" },
+];
+const features = [
+  { name: "Breadcrumbs " },
+  { name: "Color swatches" },
+  { name: "Infinity Scroll" },
+  { name: "Quick View" },
+  { name: "Right to Left" },
+];
+
+const products = [
+  {
+    id: 1,
+    name: "Coffee Lime",
+    image: img1,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 2,
+    name: "Coffee Lime",
+    image: img2,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 3,
+    name: "Coffee Lime",
+    image: img3,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 4,
+    name: "Coffee Lime",
+    image: img1,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 5,
+    name: "Coffee Lime",
+    image: img2,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 6,
+    name: "Coffee Lime",
+    image: img3,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 7,
+    name: "Coffee Lime",
+    image: img1,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 8,
+    name: "Coffee Lime",
+    image: img2,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+  {
+    id: 9,
+    name: "Coffee Lime",
+    image: img3,
+    price: 200,
+    rating: "85%",
+    reviews: 288,
+  },
+];
+
 const Themes = () => {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-
+  const [openSections, setOpenSections] = useState({
+    price: true,
+    industry: true,
+    catalogue: true,
+    features: true,
+  });
+  // Function to toggle a section
+  const toggleSection = (section) => {
+    setOpenSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
   return (
     <div className="my-8 md:my-12 lg:my-16 max-w-5xl mx-auto px-4">
       <div className="my-4 text-center">
@@ -66,41 +139,120 @@ const Themes = () => {
           >
             {/* Price Filter */}
             <div className="bg-white rounded-xl p-4 mb-2 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
+              <div
+                className="flex items-center justify-between mb-4 cursor-pointer"
+                onClick={() => toggleSection("price")}
+              >
                 <h2 className="font-semibold">Price</h2>
-                <IoIosArrowUp size={16} />
+                <IoIosArrowUp
+                  size={16}
+                  className={`transition-transform duration-300 ease-in-out ${
+                    openSections.price ? "rotate-0" : "rotate-180"
+                  }`}
+                />
               </div>
-              <div className="space-y-2">
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="rounded" />
-                  <span>Free</span>
-                  <span className="text-gray-500 ml-auto">455</span>
-                </label>
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="rounded" />
-                  <span>Paid</span>
-                  <span className="text-gray-500 ml-auto">455</span>
-                </label>
-              </div>
+
+              {openSections.price && (
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" className="rounded" />
+                    <span>Free</span>
+                    <span className="text-gray-500 ml-auto">455</span>
+                  </label>
+                  <label className="flex items-center gap-2">
+                    <input type="checkbox" className="rounded" />
+                    <span>Paid</span>
+                    <span className="text-gray-500 ml-auto">455</span>
+                  </label>
+                </div>
+              )}
             </div>
 
             {/* Industry Filter */}
-            <div className="bg-white rounded-xl p-4 shadow-sm">
-              <div className="flex items-center justify-between mb-4">
+            <div className="bg-white rounded-xl p-4 mb-2 shadow-sm">
+              <div
+                className="flex items-center justify-between mb-4 cursor-pointer"
+                onClick={() => toggleSection("industry")}
+              >
                 <h2 className="font-semibold">Industry</h2>
-                <IoIosArrowUp size={16} />
+                <IoIosArrowUp
+                  size={16}
+                  className={`transition-transform duration-300 ease-in-out ${
+                    openSections.industry ? "rotate-0" : "rotate-180"
+                  }`}
+                />
               </div>
-              <div className="space-y-2">
-                {industries.map((industry) => (
-                  <label
-                    key={industry.name}
-                    className="flex items-center gap-2"
-                  >
-                    <input type="checkbox" className="rounded" />
-                    <span>{industry.name}</span>
-                  </label>
-                ))}
+              {openSections.industry && (
+                <div className="space-y-2">
+                  {industries.map((industry) => (
+                    <label
+                      key={industry.name}
+                      className="flex items-center gap-2"
+                    >
+                      <input type="checkbox" className="rounded" />
+                      <span>{industry.name}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Catalogue Size */}
+            <div className="bg-white rounded-xl p-4 mb-2 shadow-sm">
+              <div
+                className="flex items-center justify-between mb-4 cursor-pointer"
+                onClick={() => toggleSection("catalogue")}
+              >
+                <h2 className="font-semibold">Catalogue Size</h2>
+                <IoIosArrowUp
+                  size={16}
+                  className={`transition-transform duration-300 ease-in-out ${
+                    openSections.catalogue ? "rotate-0" : "rotate-180"
+                  }`}
+                />
               </div>
+              {openSections.catalogue && (
+                <div className="space-y-2">
+                  {catalogues.map((industry) => (
+                    <label
+                      key={industry.name}
+                      className="flex items-center gap-2"
+                    >
+                      <input type="checkbox" className="rounded" />
+                      <span>{industry.name}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Features */}
+            <div className="bg-white rounded-xl p-4 shadow-sm">
+              <div
+                className="flex items-center justify-between mb-4 cursor-pointer"
+                onClick={() => toggleSection("features")}
+              >
+                <h2 className="font-semibold">Features</h2>
+                <IoIosArrowUp
+                  size={16}
+                  className={`transition-transform duration-300 ease-in-out ${
+                    openSections.features ? "rotate-0" : "rotate-180"
+                  }`}
+                />
+              </div>
+              {openSections.features && (
+                <div className="space-y-2">
+                  {features.map((industry) => (
+                    <label
+                      key={industry.name}
+                      className="flex items-center gap-2"
+                    >
+                      <input type="checkbox" className="rounded" />
+                      <span>{industry.name}</span>
+                    </label>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -116,24 +268,46 @@ const Themes = () => {
             </div>
 
             {/* Theme Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {themes.map((theme) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-6">
+              {products.map((product, index) => (
                 <div
-                  key={theme.id}
-                  className="bg-white rounded-2xl overflow-hidden shadow-sm"
+                  key={index}
+                  className="rounded-xl overflow-hidden flex flex-col h-full"
                 >
-                  <div className="relative aspect-[4/3]">
-                    {theme.images.map((image, index) => (
+                  <div className="relative">
+                    <div className="relative">
                       <img
-                        key={index}
-                        src={image}
-                        alt={`Theme preview ${index + 1}`}
-                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 `}
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-64 rounded-xl object-cover"
                       />
-                    ))}
-                    <button className="absolute bottom-4 left-4 bg-white text-black px-6 py-2 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
-                      View Demo
-                    </button>
+                      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/50 to-transparent rounded-b-xl"></div>
+                    </div>
+                    <div className="absolute bottom-0 left-0 right-0 p-3 flex justify-between items-center">
+                      <button className="bg-white px-3 py-3 rounded-full flex items-center gap-2 shadow-md hover:bg-gray-50 transition-colors">
+                        <span className="text-xs font-medium">View Demo</span>
+                      </button>
+                      <div className="flex items-center gap-2">
+                        <button className="bg-[#84472C] w-4 h-4 rounded-full border-[3px] border-white"></button>
+                        <button className="bg-[#F58A25] w-4 h-4 rounded-full border-[3px] border-white"></button>
+                        <button className="bg-[#2FBEF2] w-4 h-4 rounded-full border-[3px] border-white"></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-2 flex flex-col flex-grow">
+                    <div className="flex items-center justify-between flex-wrap mb-1">
+                      <h3 className="text-base font-medium">{product.name}</h3>
+                      <div className="flex items-center gap-1 text-base text-purple-600">
+                        <span>❤</span>
+                        <span className="font-medium">{product.rating}</span>
+                        <span className="text-gray-500">
+                          ({product.reviews})
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-lg md:text-xl font-semibold text-[#7230FF]">
+                      ${product.price}
+                    </div>
                   </div>
                 </div>
               ))}
