@@ -20,6 +20,7 @@ import BlogDetails from "../pages/BlogDetails";
 import FreeTrial from "../pages/FreeTrial";
 import Themes from "../pages/Themes";
 import ThemeDetails from "../pages/ThemeDetails";
+import HelpCenter from "../pages/HelpCenter";
 
 const router = createBrowserRouter([
   {
@@ -102,6 +103,10 @@ const router = createBrowserRouter([
       {
         path: "/theme-details",
         element: <ThemeDetails />,
+      },
+      {
+        path: "/help-center",
+        element: <HelpCenter />,
       },
     ],
   },

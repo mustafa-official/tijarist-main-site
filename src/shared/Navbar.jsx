@@ -115,7 +115,7 @@ const Navbar = () => {
               </button>
 
               <div
-                className={`absolute left-0 mt-6 w-72 bg-white border shadow-lg rounded-lg px-2 overflow-hidden transform transition-all duration-300 ease-in-out ${
+                className={`absolute left-0 mt-2 lg:mt-6 w-72 bg-white border z-50 shadow-lg rounded-lg px-2 overflow-hidden transform transition-all duration-300 ease-in-out ${
                   isDropdownOpen
                     ? "opacity-100 translate-y-0 scale-100"
                     : "opacity-0 -translate-y-5 scale-95 pointer-events-none"
@@ -166,7 +166,7 @@ const Navbar = () => {
               { name: "Pricing", path: "pricing" },
               { name: "About us", path: "about-us" },
               { name: "Contact us", path: "contact" },
-              { name: "Help", path: "help" },
+              { name: "Help", path: "help-center" },
             ].map((item, index) => (
               <li key={index}>
                 <Link
