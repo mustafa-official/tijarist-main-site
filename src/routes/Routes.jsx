@@ -21,6 +21,10 @@ import FreeTrial from "../pages/FreeTrial";
 import Themes from "../pages/Themes";
 import ThemeDetails from "../pages/ThemeDetails";
 import HelpCenter from "../pages/HelpCenter";
+import SignInEmail from "../pages/SignInEmail";
+import SignInPassword from "../pages/SignInPassword";
+import SignUp from "../pages/SignUp";
+import SignUp1 from "../pages/SignUp1";
 
 const router = createBrowserRouter([
   {
@@ -107,6 +111,22 @@ const router = createBrowserRouter([
       {
         path: "/help-center",
         element: <HelpCenter />,
+      },
+      {
+        path: "/signin-email",
+        element: <SignInEmail />,
+      },
+      {
+        path: "/signin-password",
+        element: <SignInPassword />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
+      },
+      {
+        path: "/signup1",
+        element: <SignUp1 />,
       },
     ],
   },
