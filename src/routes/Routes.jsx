@@ -25,6 +25,9 @@ import SignInEmail from "../pages/SignInEmail";
 import SignInPassword from "../pages/SignInPassword";
 import SignUp from "../pages/SignUp";
 import SignUp1 from "../pages/SignUp1";
+import SignUp2 from "../pages/SignUp2";
+import SignUp3 from "../pages/SignUp3";
+import SignUp4 from "../pages/SignUp4";
 
 const router = createBrowserRouter([
   {
@@ -127,6 +130,18 @@ const router = createBrowserRouter([
       {
         path: "/signup1",
         element: <SignUp1 />,
+      },
+      {
+        path: "/signup2",
+        element: <SignUp2 />,
+      },
+      {
+        path: "/signup3",
+        element: <SignUp3 />,
+      },
+      {
+        path: "/signup4",
+        element: <SignUp4 />,
       },
     ],
   },

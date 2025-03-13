@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { FiCheck } from "react-icons/fi";
-import { HiArrowRight, } from "react-icons/hi";
+import { HiArrowLeft, HiArrowRight } from "react-icons/hi";
 
-const SignUp1 = () => {
+const SignUp3 = () => {
   const [selected, setSelected] = useState("");
   return (
     <div className="my-8 md:my-12 lg:my-16 max-w-3xl mx-auto px-4">
       <div className="bg-white py-8 px-8 rounded-3xl">
         <h2 className="text-xl md:text-2xl font-medium text-black">
-          What would you like to sell
+          What do you plan to see
         </h2>
         <p className="text-[#555151] font-medium text-base mt-4 mb-3.5">
           We’ll make sure you’re all set up to see in these places
@@ -26,11 +26,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "online-store"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "online-store"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -45,10 +45,10 @@ const SignUp1 = () => {
 
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black text-center">
-                    An Online Store
+                    Products I buy or make my self
                   </p>
                   <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Create a fully customizable website
+                    Shipped by me
                   </p>
                 </div>
               </div>
@@ -66,11 +66,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "retail-store"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "retail-store"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -84,10 +84,10 @@ const SignUp1 = () => {
                 </div>
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black text-center">
-                    In person at retail store
+                    Digital Products
                   </p>
                   <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Brick-and-mortar stores
+                    Music ,NFt , Digital Products
                   </p>
                 </div>
               </div>
@@ -105,11 +105,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "events"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "events"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -123,10 +123,10 @@ const SignUp1 = () => {
                 </div>
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black text-center">
-                    In person at events
+                    Dropshipping Products
                   </p>
                   <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Create a fully customizable website
+                    Shipped by me
                   </p>
                 </div>
               </div>
@@ -144,11 +144,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "website"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "website"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -162,10 +162,10 @@ const SignUp1 = () => {
                 </div>
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black text-center">
-                    An existing website or blog
+                    Services
                   </p>
                   <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Create a fully customizable website
+                    Music ,NFt , Digital Products
                   </p>
                 </div>
               </div>
@@ -183,11 +183,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "socialMedia"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "socialMedia"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -201,10 +201,10 @@ const SignUp1 = () => {
                 </div>
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black text-center">
-                    Social Media
+                    Print on-demand products
                   </p>
                   <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Create a fully customizable website
+                    Shipped by me
                   </p>
                 </div>
               </div>
@@ -222,11 +222,11 @@ const SignUp1 = () => {
               />
               <div
                 className={`w-full min-h-[160px] p-6 border rounded-xl transition-colors flex flex-col relative 
-          ${
-            selected === "onlineMarketing"
-              ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
-              : "hover:border-[#7230FF]"
-          }`}
+                 ${
+                   selected === "onlineMarketing"
+                     ? "border-[#7230FF] shadow-[0px_0px_18px_1px_#7230FF33]"
+                     : "hover:border-[#7230FF]"
+                 }`}
               >
                 {/* Radio Button in Top-Right Corner */}
                 <div className="absolute top-4 right-4">
@@ -240,10 +240,7 @@ const SignUp1 = () => {
                 </div>
                 <div className="flex-grow flex flex-col justify-center ">
                   <p className="font-medium text-base md:text-xl text-black mt-8 text-center">
-                    Online marketplace
-                  </p>
-                  <p className="text-[#555151] text-sm md:text-base mt-2 text-center">
-                    Create a fully customizable website
+                    I’ll decide later
                   </p>
                 </div>
               </div>
@@ -251,8 +248,8 @@ const SignUp1 = () => {
           </div>
         </div>
         <div className="mt-5 sm:mt-7 flex items-center gap-2.5 justify-end">
-          <button className="border border-black rounded-lg min-w-28 h-10 text-sm font-semibold">
-            Skip
+          <button className="flex items-center justify-center gap-2 bg-[#4761CB] text-white rounded-lg min-w-28 h-10 text-sm font-semibold">
+            <HiArrowLeft className="w-4 h-4" /> Back
           </button>
           <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#BD30FF] to-[#7230FF] text-white rounded-lg min-w-28 h-10 text-sm font-semibold">
             Next <HiArrowRight className="w-4 h-4" />{" "}
@@ -263,4 +260,4 @@ const SignUp1 = () => {
   );
 };
 
-export default SignUp1;
+export default SignUp3;
