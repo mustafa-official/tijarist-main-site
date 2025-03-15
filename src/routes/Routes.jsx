@@ -28,6 +28,7 @@ import SignUp1 from "../pages/SignUp1";
 import SignUp2 from "../pages/SignUp2";
 import SignUp3 from "../pages/SignUp3";
 import SignUp4 from "../pages/SignUp4";
+import Affiliate from "../pages/Affiliate";
 
 const router = createBrowserRouter([
   {
@@ -142,6 +143,10 @@ const router = createBrowserRouter([
       {
         path: "/signup4",
         element: <SignUp4 />,
+      },
+      {
+        path: "/affiliate",
+        element: <Affiliate />,
       },
     ],
   },
